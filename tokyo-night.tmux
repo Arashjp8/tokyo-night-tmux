@@ -70,11 +70,11 @@ hostname="#($SCRIPTS_PATH/hostname-widget.sh)"
 
 #+--- Bars LEFT ---+
 # Session name
-tmux set -g status-left "#[fg=${THEME[white]},bold] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[bold,nodim]#S$hostname "
+tmux set -g status-left "#[fg=${THEME[white]}] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[nodim]#S$hostname "
 
 #+--- Windows ---+
 # Focus
-tmux set -g window-status-current-format "$RESET#[fg=${THEME[foreground]}]#{?#{==:#{pane_current_command},ssh},󰣀,  $window_space}#[fg=${THEME[white]},bold,nodim]$window_number#W#[nobold]#{?window_zoomed_flag, $zoom_number, } "
+tmux set -g window-status-current-format "$RESET#[fg=${THEME[foreground]}]#{?#{==:#{pane_current_command},ssh},󰣀,  $window_space}#[fg=${THEME[white]},nodim]$window_number#W#[nobold]#{?window_zoomed_flag, $zoom_number, } "
 # Unfocused
 tmux set -g window-status-format "$RESET#[fg=${THEME[foreground]}]#{?#{==:#{pane_current_command},ssh},󰣀,  $window_space}#[fg=${THEME[bwhite]},nodim]$window_number#W#[nobold]#{?window_zoomed_flag, $zoom_number, } "
 
