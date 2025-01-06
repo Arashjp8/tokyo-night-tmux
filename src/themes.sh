@@ -55,7 +55,7 @@ case $SELECTED_THEME in
 *)
   # Default to night theme
   declare -A THEME=(
-    ["background"]="#1A1B26"
+    ["background"]="#16161E"
     ["foreground"]="#a9b1d6"
     ["black"]="#414868"
     ["blue"]="#7aa2f7"
@@ -89,3 +89,4 @@ THEME['ghred']="#d73a4a"
 THEME['ghyellow']="#d29922"
 
 RESET="#[fg=${THEME[foreground]},bg=${THEME[background]},nobold,noitalics,nounderscore,nodim]"
+
