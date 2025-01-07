@@ -34,11 +34,8 @@ default_window_id_style="digital"
 default_pane_id_style="hsquare"
 default_zoom_id_style="dsquare"
 
-# default_terminal_icon=""
-# default_active_terminal_icon=""
-
-default_terminal_icon=""
-default_active_terminal_icon=""
+default_terminal_icon=""
+default_active_terminal_icon=""
 
 window_id_style="$(echo "$TMUX_VARS" | grep '@tokyo-night-tmux_window_id_style' | cut -d" " -f2)"
 pane_id_style="$(echo "$TMUX_VARS" | grep '@tokyo-night-tmux_pane_id_style' | cut -d" " -f2)"
@@ -70,14 +67,14 @@ hostname="#($SCRIPTS_PATH/hostname-widget.sh)"
 
 #+--- Bars LEFT ---+
 # Session name
-# tmux set -g status-left "#[fg=${THEME[background]},bg=#{?client_prefix,${THEME[yellow]},${THEME[blue]}}] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[bold,nodim]#S$hostname "
-tmux set -g status-left "#[fg=${THEME[background]},bg=#{?client_prefix,${THEME[yellow]},${THEME[blue]}}] #[bold,nodim]#S$hostname "
+tmux set -g status-left "#[fg=${THEME[background]},bg=${THEME[blue]}] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[bold,nodim]#S$hostname "
+# tmux set -g status-left "#[fg=${THEME[background]},bg=#{?client_prefix,${THEME[yellow]},${THEME[blue]}}] #[bold,nodim]#S$hostname "
 
 #+--- Windows ---+
 # Focus
-tmux set -g window-status-current-format "  $RESET#[fg=${THEME[foreground]}]#{$window_space}#[fg=${THEME[white]},nodim]$window_number#W#[nobold]#{?window_zoomed_flag, $zoom_number, } "
+tmux set -g window-status-current-format "$RESET#[fg=${THEME[green]},bg=${THEME[bblack]}]  #{$window_space}#[fg=${THEME[white]},bold,nodim]$window_number#W#[nobold]#{?window_zoomed_flag, $zoom_number, } "
 # Unfocused
-tmux set -g window-status-format "  $RESET#[fg=${THEME[foreground]}]#{$window_space}#[fg=${THEME[bwhite]},nodim]$window_number#W#[nobold]#{?window_zoomed_flag, $zoom_number, } "
+tmux set -g window-status-format "$RESET#[fg=${THEME[green]}]  #{$window_space}#[fg=${THEME[white]},nodim]$window_number#W#[nobold]#{?window_zoomed_flag, $zoom_number, } "
 
 #+--- Bars RIGHT ---+
 tmux set -g status-right "$battery_status$current_path$cmus_status$netspeed$git_status$wb_git_status$date_and_time"
