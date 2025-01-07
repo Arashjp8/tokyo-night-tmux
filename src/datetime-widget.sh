@@ -29,19 +29,22 @@ elif [[ $date_format == "MDY" ]]; then
 elif [[ $date_format == "DMY" ]]; then
   # Day Month Year date format
   date_string=" %d-%m-%Y"
+elif [[ $date_format == "DAY-MONTH-YEAR" ]]; then
+  # Day-Month-Year with abbreviated month name
+  date_string=" %d-%b-%Y"
 elif [[ $date_format == "hide" ]]; then
-  # Day Month Year date format
+  # Hide the date
   date_string=""
 else
-  # Default to YMD date format if not specified
-  date_string=" %Y-%m-%d"
+  # Default to Day-Month-Year with abbreviated month name
+  date_string=" %d-%b-%Y"
 fi
 
 if [[ $time_format == "12H" ]]; then
   # 12-hour format with AM/PM
   time_string="%I:%M %p "
 elif [[ $time_format == "hide" ]]; then
-  # 24-hour format
+  # Hide the time
   time_string=""
 else
   # Default to 24-hour format if not specified
@@ -54,4 +57,5 @@ if [[ $date_string && $time_string ]]; then
 fi
 
 echo "$RESET#[fg=${THEME[foreground]},bg=${THEME[background]}]$date_string $separator$time_string"
+
 
