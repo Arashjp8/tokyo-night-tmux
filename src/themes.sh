@@ -66,6 +66,7 @@ case $SELECTED_THEME in
     ["white"]="#c0caf5"
     ["yellow"]="#e0af68"
 
+    ["bbackground"]="#1A1B26"
     ["bblack"]="#2A2F41"
     ["bblue"]="#7aa2f7"
     ["bcyan"]="#7dcfff"
