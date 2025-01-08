@@ -54,8 +54,10 @@ case $SELECTED_THEME in
 
 "githubdark")
   declare -A THEME=(
-    ["background"]="#0D0F13"
-    ["foreground"]="#8b949e"
+    ["background"]="#14171C"
+    # ["background"]="#0D0F13"
+    # ["foreground"]="#8b949e"
+    ["foreground"]="#9EAFC2"
     ["black"]="#000000"
     ["blue"]="#6ca4f8"
     ["cyan"]="#2b7489"
@@ -115,5 +117,3 @@ THEME['ghred']="#d73a4a"
 THEME['ghyellow']="#d29922"
 
 RESET="#[fg=${THEME[foreground]},bg=${THEME[background]},nobold,noitalics,nounderscore,nodim]"
-
-
