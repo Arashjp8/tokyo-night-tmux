@@ -52,6 +52,31 @@ case $SELECTED_THEME in
   )
   ;;
 
+"githubdark")
+  declare -A THEME=(
+    ["background"]="#0D0F13"
+    ["foreground"]="#8b949e"
+    ["black"]="#000000"
+    ["blue"]="#6ca4f8"
+    ["cyan"]="#2b7489"
+    ["green"]="#56d364"
+    ["magenta"]="#db61a2"
+    ["red"]="#f78166"
+    ["white"]="#ffffff"
+    ["yellow"]="#e3b341"
+
+    ["bbackground"]="#101216"
+    ["bblack"]="#4d4d4d"
+    ["bblue"]="#6ca4f8"
+    ["bcyan"]="#2b7489"
+    ["bgreen"]="#56d364"
+    ["bmagenta"]="#db61a2"
+    ["bred"]="#f78166"
+    ["bwhite"]="#8b949e"
+    ["byellow"]="#e3b341"
+  )
+  ;;
+
 *)
   # Default to night theme
   declare -A THEME=(
@@ -90,4 +115,5 @@ THEME['ghred']="#d73a4a"
 THEME['ghyellow']="#d29922"
 
 RESET="#[fg=${THEME[foreground]},bg=${THEME[background]},nobold,noitalics,nounderscore,nodim]"
+
 
