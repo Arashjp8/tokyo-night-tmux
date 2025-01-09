@@ -68,15 +68,16 @@ hostname="#($SCRIPTS_PATH/hostname-widget.sh)"
 #+--- Bars LEFT ---+
 # Session name
 # tmux set -g status-left "#[fg=${THEME[background]},bg=${THEME[blue]}] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[bold,nodim]#S$hostname "
-tmux set -g status-left "#[fg=${THEME[blue]},bg=${THEME[background]}]▊#[fg=${THEME[foreground]},bg=${THEME[background]}] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[bold,nodim]#S $hostname"
+tmux set -g status-left "#[fg=${THEME[background]},bg=${THEME[blue]}] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[bold,nodim]#S $hostname"
 
 #+--- Windows ---+
 # Focus
-tmux set -g window-status-current-format "$RESET#[fg=${THEME[green]},bg=${THEME[background]}] #{$window_space}#[fg=${THEME[foreground]},bold,nodim]$window_number#W#[nobold]#{?window_zoomed_flag, $zoom_number, } "
+tmux set -g window-status-current-format "$RESET#[fg=${THEME[green]},bg=${THEME[background]}]  #{$window_space}#[fg=${THEME[foreground]},bold,nodim]$window_number#W#[nobold]#{?window_zoomed_flag, $zoom_number, } "
 # Unfocused
-tmux set -g window-status-format "$RESET#[fg=${THEME[green]}] #{$window_space}#[fg=${THEME[bwhite]},nodim]$window_number#W#[nobold]#{?window_zoomed_flag, $zoom_number, } "
+tmux set -g window-status-format "$RESET#[fg=${THEME[green]}]  #{$window_space}#[fg=${THEME[bwhite]},nodim]$window_number#W#[nobold]#{?window_zoomed_flag, $zoom_number, } "
 
 #+--- Bars RIGHT ---+
-tmux set -g status-right "$battery_status$current_path$cmus_status$netspeed$git_status$wb_git_status$date_and_time#[fg=${THEME[blue]},bg=${THEME[background]}]▊"
+# tmux set -g status-right "$battery_status$current_path$cmus_status$netspeed$git_status$wb_git_status$date_and_time#[fg=${THEME[blue]},bg=${THEME[background]}]▊"
+tmux set -g status-right "$battery_status$current_path$cmus_status$netspeed$git_status$wb_git_status$date_and_time"
 tmux set -g window-status-separator ""
 
