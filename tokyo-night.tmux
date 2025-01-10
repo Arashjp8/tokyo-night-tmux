@@ -68,7 +68,8 @@ hostname="#($SCRIPTS_PATH/hostname-widget.sh)"
 #+--- Bars LEFT ---+
 # Session name
 # tmux set -g status-left "#[fg=${THEME[background]},bg=${THEME[blue]}] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[bold,nodim]#S$hostname "
-tmux set -g status-left "#[fg=${THEME[background]},bg=${THEME[blue]}] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[bold,nodim]#S $hostname"
+# tmux set -g status-left "#[fg=${THEME[background]},bg=${THEME[blue]}] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[bold,nodim]#S $hostname"
+tmux set -g status-left "#[fg=${THEME[foreground]},bg=${THEME[bblack]}] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[bold,nodim]#S $hostname"
 
 #+--- Windows ---+
 # Focus
@@ -80,4 +81,3 @@ tmux set -g window-status-format "$RESET#[fg=${THEME[green]}]  #{$window_space}#
 # tmux set -g status-right "$battery_status$current_path$cmus_status$netspeed$git_status$wb_git_status$date_and_time#[fg=${THEME[blue]},bg=${THEME[background]}]▊"
 tmux set -g status-right "$battery_status$current_path$cmus_status$netspeed$git_status$wb_git_status$date_and_time"
 tmux set -g window-status-separator ""
-

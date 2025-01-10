@@ -67,8 +67,8 @@ case $SELECTED_THEME in
     ["white"]="#ffffff"
     ["yellow"]="#e3b341"
 
-    ["bbackground"]="#101216"
-    ["bblack"]="#4d4d4d"
+    ["bbackground"]="#0D1117"
+    ["bblack"]="#30363D"
     ["bblue"]="#6ca4f8"
     ["bcyan"]="#2b7489"
     ["bgreen"]="#56d364"
@@ -117,3 +117,4 @@ THEME['ghred']="#d73a4a"
 THEME['ghyellow']="#d29922"
 
 RESET="#[fg=${THEME[foreground]},bg=${THEME[background]},nobold,noitalics,nounderscore,nodim]"
+
